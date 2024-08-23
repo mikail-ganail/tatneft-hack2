@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  @ViewChild('videoElement')
+  videoElement!: ElementRef;
 
+  ngAfterViewInit() {
+    const video: HTMLVideoElement = this.videoElement.nativeElement;
+    video.muted = true; // Убедитесь, что видео беззвучное
+    video.play().catch(error => {
+      console.error('Error attempting to play video:', error);
+    });
+  }
 }
