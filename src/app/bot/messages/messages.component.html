@@ -1,0 +1,13 @@
+<div
+    class="message-card"
+    [ngClass]="{
+        bot: message.author === 'bot',
+        user: message.author === 'user'
+    }"
+>
+    <div>
+        <p class="message-author">{{ message.author }}</p>
+        <p class="message-text">{{ message.text }}</p>
+        <p class="message-time">{{ message.date | date : "shortTime" }}</p>
+    </div>
+</div>
