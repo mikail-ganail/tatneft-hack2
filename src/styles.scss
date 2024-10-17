@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+	font-family: "Suisse int";
+	font-weight: 400;
+	src: local("Suisse int"),
+		url("../src/assets/fonts/suisseint/SuisseIntl-Regular.woff")
+			format("woff");
+}
+
+@font-face {
+	font-family: "Suisse int";
+	font-weight: 700;
+	src: local("Suisse int"),
+		url("../src/assets/fonts/suisseint/SuisseIntl-Bold.woff") format("woff");
+}
+
+body {
+    font-family: 'Suisse int';
+	background-color: rgba($color: #f3f3f3, $alpha: 1.0);
+}
+
+.standart-text {
+	font-size: 18px;
+    font-weight: normal;
+}

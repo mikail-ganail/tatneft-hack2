@@ -1,3 +1,7 @@
+.message-box {
+    width: 100%;
+}
+
 .message-card {
     display: inline-block;
     margin-bottom: 10px;
@@ -8,7 +12,6 @@
     user-select: text;
 
     & div {
-        //display: inline-block;
         margin: 5px 10px;
         & p {
             margin: 5px 0;
@@ -33,10 +36,32 @@
 
 .message-text {
     margin-top: 5px;
+    color: rgb(236, 232, 232);
 }
 
 .message-time {
     text-align: right;
     font-size: 0.8em;
     color: rgb(255, 255, 255);
+}
+
+.message-link {
+    color: #a4f8dd;
+    user-select: none;
+    cursor: pointer;
+}
+
+.mes-count {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    margin: 0;
+}
+
+.open-list {
+
+}
+
+a {
+    color: rgb(5, 49, 170);
 }

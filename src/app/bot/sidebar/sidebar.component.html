@@ -1,0 +1,20 @@
+<div class="sidebar-wrapper">
+    <h1 class="title">
+        <p class="red">TAT</p>
+        <p class="white">Bot</p>
+        <p class="green">NEFT</p>
+    </h1>
+
+    <div class="chats">
+        <div>
+            <div *ngFor="let chat of chats" class="lala">
+                <p class="name">{{chat.name}}</p>
+                <p class="lsreq">{{chat.lastReq}}</p>
+                <p class="date">{{chat.date}}</p>
+            </div>
+        </div>
+        <div class="lala lala2" (click)="changeAdmin()">
+            <p class="name">Admin panel</p>
+        </div>
+    </div>
+</div>

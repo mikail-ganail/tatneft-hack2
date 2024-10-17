@@ -1,10 +1,4 @@
-import {
-    Component,
-    ElementRef,
-    HostListener,
-    Input,
-    Renderer2,
-} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-messages',
@@ -12,5 +6,16 @@ import {
     styleUrls: ['./messages.component.scss'],
 })
 export class MessagesComponent {
-    @Input() message!: { text: string; date: Date; author: string };
+    @Input() message!: {
+        links?: [string[], boolean];
+        text: string;
+        date: Date;
+        author: string;
+    };
+
+    isOpenLink() {
+        if (this.message.links) {
+            this.message.links[1] = !this.message.links[1]
+        }
+    }
 }

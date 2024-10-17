@@ -1,13 +1,29 @@
-<div
-    class="message-card"
-    [ngClass]="{
-        bot: message.author === 'bot',
-        user: message.author === 'user'
-    }"
->
-    <div>
-        <p class="message-author">{{ message.author }}</p>
-        <p class="message-text">{{ message.text }}</p>
-        <p class="message-time">{{ message.date | date : "shortTime" }}</p>
+<div class="message-box">
+    <div
+        class="message-card"
+        [ngClass]="{
+            bot: message.author === 'bot',
+            user: message.author === 'user'
+        }"
+    >
+        <div>
+            <p class="message-author">{{ message.author }}</p>
+            <p class="message-text">{{ message.text }}</p>
+            <div [ngClass]="{ 'mes-count': message.author === 'bot' }">
+                <p class="message-link" *ngIf="message.author === 'bot'" (click)="isOpenLink()">
+                    Источники
+                </p>
+                <p class="message-time">
+                    {{ message.date | date : "shortTime" }}
+                </p>
+            </div>
+        </div>
+        <div *ngIf="message.author === 'bot'">
+            <div *ngIf="message.links?.[1]" class="open-list">
+                <div *ngFor="let link of message.links?.[0]">
+                    <a href="{{link}}">{{link}}</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

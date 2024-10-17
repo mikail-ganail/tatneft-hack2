@@ -1,0 +1,95 @@
+.bot-wrapper {
+    position: absolute;
+    right: -25px;
+    bottom: -25px;
+    width: 800px;
+    min-width: 600px;
+    max-width: 1000px;
+    height: 80vh;
+    min-height: 50vh;
+    max-height: 94vh;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: default;
+}
+
+#close {
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lala-bot {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar {
+    background-color: rgb(188 210 210);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    border-radius: inherit;
+    margin-top: 10px;
+}
+
+.messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+	margin-top: 15px;
+}
+
+.message-input {
+    display: flex;
+    padding: 0 15px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+
+    & .input-field {
+        flex: 1;
+        margin-right: 10px;
+        user-select: none;
+
+        & input {
+            border: none;
+            outline: none;
+            background-color: inherit;
+            width: -webkit-fill-available;
+            padding: 5px 15px;
+            height: 40px;
+            border-radius: 20px;
+        }
+    }
+
+    & button {
+        margin: 2px;
+        width: 48px;
+        height: 48px;
+        border: none;
+        padding: 0;
+        background-color: inherit;
+        cursor: pointer;
+        border-radius: 10px;
+
+        & svg {
+            height: 30px;
+        }
+
+        &:hover {
+            fill: rgb(4, 90, 7);
+            background-color: #b9c4c4;
+        }
+        &:active {
+            background-color: #9bc7aa;
+        }
+    }
+}

@@ -1,2 +1,34 @@
-<img class="tatneft" src="../../assets/images/logo.svg">
-<video class="video" src="../../assets/videos/SnapSave.io-«Может я на коньках в кадр заеду_» _ Зарипов в рекламе АЗС «Татнефть»(360p).mp4" autoplay></video>
+<div class="osn">
+    <img class="tatneft" src="../../assets/icons/logo.svg" /><br />
+    <video
+        #videoElement
+        class="video"
+        src="../../assets/videos/vidos.webm"
+        loop
+    ></video>
+    <div class="lenta">
+        <ul class="spisok">
+            <a class="icon"
+                ><img src="../../assets/icons/logo-small-black.svg"
+            /></a>
+            <a>О компании</a>
+            <a>Инвесторам</a>
+            <a>Инвесторам</a>
+            <a>Устойчивое развитие</a>
+            <a>Пресс-центр</a>
+            <a>Карьера</a>
+        </ul>
+    </div>
+</div>
+
+<div class="bot-circle">
+    <img
+        *ngIf="!isBot"
+        (click)="openBot()"
+        src="../../assets/icons/bot.svg"
+        alt=""
+    />
+    <ng-container *ngIf="isBot">
+        <app-bot-box [isBot]="isBot" (isBotChange)="openBot()"></app-bot-box>
+    </ng-container>
+</div>
